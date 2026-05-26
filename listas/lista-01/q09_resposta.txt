@@ -1,0 +1,30 @@
+Lista 01 — Questão 09: EAFP vs LBYL
+Aluno: (Artur Gabriel Santos de Souza)
+Data:  (24/05/2026)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ENUNCIADO:
+Em q09.py: reescreva a função abaixo no estilo EAFP usando try/except.
+
+  def dividir(a, b):
+      if b != 0:
+          return a / b
+      else:
+          return None
+
+Em q09_resposta.txt: explique o que significa EAFP e qual versão é mais Pythônica.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUA RESPOSTA:
+
+(
+   O EAFP baseia-se na ideia de que "é mais fácil pedir perdão do que permissão". 
+   Na prática, isso significa que o código vai direto ao ponto, tentando executar a ação de primeira. 
+   Se algo der errado, um bloco try/except entra em ação para lidar com a falha. 
+   Essa abordagem é vista como a cara do Python (altamente "pythônica") 
+   porque usa o próprio sistema de exceções da linguagem para ditar o fluxo, o que evita 
+   checagens desnecessárias e limpa o visual do código. 
+   Em vez de testar se a variável b é zero antes de dividir, o programa simplesmente
+   roda a operação e se prepara para capturar um eventual ZeroDivisionError. 
+)
+
