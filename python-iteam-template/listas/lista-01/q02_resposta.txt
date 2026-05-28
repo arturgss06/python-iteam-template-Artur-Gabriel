@@ -1,0 +1,28 @@
+Lista 01 — Questão 02: Tipos e Conversão
+Aluno: (Artur Gabriel Santos de Souza)
+Data:  (22/05/2026)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ENUNCIADO:
+Para cada linha abaixo, indique: (a) o tipo do resultado e (b) o valor.
+Responda por raciocínio ANTES de executar. Depois confirme no REPL.
+
+  print(type(10 / 2))         # tipo: ?   valor: ?
+  print(type(10 // 2))        # tipo: ?   valor: ?
+  print(int(3.9))             # tipo: ?   valor: ?
+  print(bool([]))             # tipo: ?   valor: ?
+  print(bool("False"))       # tipo: ?   valor: ?
+  print(str(True) == "True") # tipo: ?   valor: ?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUA RESPOSTA:
+
+(  
+  print(type(10 / 2))         # tipo: float valor:5.0
+  print(type(10 // 2))        # tipo: int valor: 5
+  print(int(3.9))             # tipo: int valor: 3
+  print(bool([]))             # tipo: bool valor: false
+  print(bool("False"))       # tipo:  bool valor: True
+  print(str(True) == "True") # tipo:  bool valor: True
+)
+

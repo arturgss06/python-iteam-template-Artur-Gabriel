@@ -1,0 +1,34 @@
+Lista 01 — Questão 10: Análise Crítica de Código
+Aluno: (Artur Gabriel Santos de Souza)
+Data:  (24/05/2026)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ENUNCIADO:
+Em q10.py: reescreva a função corrigindo os 3 problemas encontrados.
+
+  def processar_alunos(alunos=[]):
+      aprovados = []
+      for i in range(len(alunos)):
+          if alunos[i]['nota'] >= 7.0:
+              aprovados = aprovados + [alunos[i]['nome']]
+      print(aprovados)
+
+Em q10_resposta.txt: identifique cada problema e explique por que é um problema.
+Dica: há um problema em: (1) definição da função, (2) como o loop é escrito, (3) como a lista é construída.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUA RESPOSTA:
+
+(
+    Parâmetro padrão mutável (alunos=[]): Usar uma lista direto no argumento faz com
+    que o Python reutilize a mesma estrutura em todas as chamadas da função, 
+    o que acumula dados e gera bugs. O correto é definir como None e criar a lista dentro da função.
+
+    Uso de range(len(alunos)): Percorrer a lista pelos índices numéricos deixa o código poluído. 
+    É muito mais limpo e "pythônico" iterar direto nos elementos usando for aluno in alunos:
+
+    Construção da lista com aprovados = aprovados + [...]: Usar o + recria 
+    uma lista nova a cada repetição, o que pesa na memória. O método .append() é a melhor opção, 
+    pois adiciona o elemento direto na lista existente de forma muito mais eficiente.
+)
+
