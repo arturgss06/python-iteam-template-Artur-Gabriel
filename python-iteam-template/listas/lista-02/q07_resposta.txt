@@ -1,16 +1,31 @@
-Lista 02 — Questão 07: Interpretação de Classe
-Aluno: (seu nome)
-Data:  (data)
+# Lista 02 — Questão 06: Módulo de Estatísticas (programa principal)
+# Aluno: Artur gabriel 
+# Data:  (data)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ENUNCIADO:
-Leia a classe ContaBancaria do enunciado e responda SEM executar:
-  (a) O que self.saldo representa — por que usar self e não variável local?
-  (b) O que acontece se você chamar conta.sacar(2000) com saldo = 500?
-  (c) Reescreva __str__ para exibir também o número da conta.
+# ── Enunciado ───────────────────────────────────────────────────────────────
+# q06_estatisticas.py: crie o módulo com as funções:
+#   media(dados), mediana(dados), moda(dados), desvio_padrao(dados)
+# Todas devem: receber lista de floats, validar que não está vazia
+# (lançar ValueError se estiver), retornar resultado arredondado (2 casas).
+# Use apenas stdlib (math permitido, não use statistics).
+# 
+# q06_main.py: importe o módulo e aplique as 4 funções sobre 10 notas
+# digitadas pelo usuário.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SUA RESPOSTA:
+# ── Sua solução abaixo ──────────────────────────────────────────────────────
 
-(escreva aqui com suas próprias palavras)
+import q06_estatisticas as est
 
+notas = []
+
+print("Digite 10 notas:")
+
+for i in range(10):
+    nota = float(input(f"Nota {i + 1}: "))
+    notas.append(nota)
+
+print("\nResultados:")
+print("Média:", est.media(notas))
+print("Mediana:", est.mediana(notas))
+print("Moda:", est.moda(notas))
+print("Desvio padrão:", est.desvio_padrao(notas))

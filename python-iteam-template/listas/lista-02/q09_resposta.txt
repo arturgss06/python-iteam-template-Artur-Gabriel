@@ -15,5 +15,5 @@ Em q09_resposta.txt: explique a diferença entre _atributo e __atributo em Pytho
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SUA RESPOSTA:
 
-(escreva aqui com suas próprias palavras)
-
+Em Python, um atributo com apenas um underline (_atributo) é considerado protegido por convenção. Isso significa que ele não deve ser acessado diretamente fora da classe, mas ainda pode ser utilizado se necessário.
+Já um atributo com dois underlines (__atributo) utiliza o recurso chamado name mangling, que dificulta o acesso direto ao atributo fora da classe. Isso aumenta a proteção dos dados e ajuda no encapsulamento, evitando alterações indevidas.

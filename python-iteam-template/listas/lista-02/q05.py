@@ -12,3 +12,22 @@
 # 'cidadãs de primeira classe' em Python.
 
 # ── Sua solução abaixo ──────────────────────────────────────────────────────
+
+def aplicar(lista, funcao):
+    nova_lista = []
+
+    for elemento in lista:
+        nova_lista.append(funcao(elemento))
+
+    return nova_lista
+
+def quadrado(numero):
+    return numero ** 2
+
+def par(numero):
+    return numero % 2 == 0
+
+numeros = [1, 2, 3, 4, 5]
+
+print(aplicar(numeros, quadrado))
+print(aplicar(numeros, par))
