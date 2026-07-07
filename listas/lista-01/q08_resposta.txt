@@ -1,0 +1,27 @@
+Lista 01 — Questão 08: is vs ==
+Aluno: (Artur Gabriel Santos de Souza)
+Data:  (24/05/2026)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ENUNCIADO:
+Explique a diferença entre os operadores is e == em Python.
+Dê um exemplo onde o resultado de cada um é diferente.
+Em que situação é correto usar is em código profissional?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUA RESPOSTA:
+
+(O operador == compara os valores dos objetos. Já o operador is verifica se duas variáveis apontam para o mesmo objeto na memória.
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True
+print(a is b)  # False
+
+Nesse caso, a e b têm os mesmos valores, então == retorna True. Porém, são listas diferentes armazenadas em locais diferentes da memória, por isso is retorna False.
+Em código profissional, o uso mais comum e correto de is é para comparar com None:
+
+if valor is None:
+    print("Valor não definido")
+  Isso garante que estamos verificando a identidade do objeto especial None, que existe como uma única instância em Python.)  
